@@ -1,32 +1,24 @@
 #include <iostream>
 using namespace std;
-/*
-Return keyword = used to exit function immediately / send a value back to the program
-Syntax: return expression;
-Passes result back to caller, stops execution of function once reached 
-Function Return Types: int, double, string void
-*/
-string greet(string name){ // returns string
-    return "Hello " + name + "!" + "\n"; // string concatenation
-}
 
-int getAge(int age){       // returns integer
+/*
+Return keyword = used to exit a function immediately / send a value back to the program
+Syntax = return expression;
+*/
+string greet(string name){
+    return "Hello " + name + "!" + "\n";
+}
+int getAge(int age){
     return age;
 }
-
-double getTemp(){          // returns double precision decimal
+double getTemp(){
     return 70.5;
 }
-
-char getGrade(){           // returns character
-    return 'A';
+bool isEven(int a){
+    return a % 2 == 0;
 }
-bool isEven(int a){        // returns boolean - true/false
-    return a & 2 == 0;
-}
-
-void showMessage(){        // returns nothing, used for printing / modifying
-    cout << "Void function." << endl;
+void showMessage(){
+    cout << "Void function!" << endl;
 }
 int main(){
     return 0;
