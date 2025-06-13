@@ -1,2 +1,1 @@
-# Bro-Code-C
-Bro Code C++ Course
+C++ Topics and Defintions with Examples
