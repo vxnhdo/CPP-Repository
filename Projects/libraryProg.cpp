@@ -12,7 +12,7 @@ bool findBook(string arr[], int size, string target){ // Function to find a book
     return false; 
 }
 
-bool addBook(string arr[], int size, string title){ // Function to add a book, based on array, its size and string title
+bool addBook(string arr[], int &size, string title){ // Function to add a book, based on array, its size and string title
     if (size >= MAX_BOOKS){ // if size is greater than or equal to MAX_BOOKS array size, return false
         cout << "Inventory is full." << endl;
         return false;
@@ -23,7 +23,8 @@ bool addBook(string arr[], int size, string title){ // Function to add a book, b
         return false;
     }
 
-    arr[size++] = title; // Adds current title to the current logical index & is incremented after
+    arr[size] = title; // Adds current title to the current logical index & is incremented after
+    size++;
     cout << "Book added successfully." << endl;
     return true;
 }
