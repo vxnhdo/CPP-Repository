@@ -44,12 +44,12 @@ int main(){
         cin.ignore(); // clears whitespace from input buffer
 
         switch (userChoice){
-            case 1:
+            case 1: // if '1' is entered, ask for a book title then call addBook function
                 cout << "Enter a book title to add: ";
                 getline(cin, title);
                 addBook(books, numOfBooks, title);
                 break;
-            case 2:
+            case 2: // if '2' is entered, adk for a book title then call findBook to return a success or error message
                 cout << "Enter a book title to find: ";
                 getline(cin, title);
                 if (findBook(books, numOfBooks, title)){
@@ -59,13 +59,13 @@ int main(){
                     cout << "Book is NOT in stock." << endl;
                     break;
                 }
-            case 3:
+            case 3: // if '3' is entered, quit the program
                 cout << "Exiting..." << endl;
                 break;
             default:
                 cout << "Invalid input, try again." << endl;
         }
-    } while (userChoice != 3);
+    } while (userChoice != 3); // do this loop while userChoice is NOT equal to 3
     cout << "Goodbye!" << endl;
 
     return 0;
